@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    internal class NodoCola
+    public class NodoCola
     {
+        public string usuario;
+        public NodoCola siguiente;
     }
 }

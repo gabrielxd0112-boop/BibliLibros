@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    internal class NodoCircular
+    public class NodoCircular
     {
+        public string titulo;
+        public NodoCircular siguiente;
     }
 }

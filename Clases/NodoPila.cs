@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    internal class NodoPila
+    public class NodoPila
     {
+        public string accion;
+        public NodoPila siguiente;
     }
 }
