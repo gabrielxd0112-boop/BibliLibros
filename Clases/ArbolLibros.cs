@@ -78,5 +78,26 @@ namespace Clases
                 MostrarInOrden(nodo.derecha);
             }
         }
+        public List<NodoArbol> BuscarLibroPorTituloOAutor(NodoArbol nodo, string criterio)
+        {
+            List<NodoArbol> resultados = new List<NodoArbol>();
+            BuscarRecursivo(nodo, criterio.ToLower(), resultados);
+            return resultados;
+        }
+
+        // Método recursivo para recorrer el árbol y buscar coincidencias
+        private void BuscarRecursivo(NodoArbol nodo, string criterio, List<NodoArbol> resultados)
+        {
+            if (nodo == null)
+                return;
+
+            if (nodo.Titulo.ToLower().Contains(criterio) || nodo.Autor.ToLower().Contains(criterio))
+            {
+                resultados.Add(nodo);
+            }
+
+            BuscarRecursivo(nodo.izquierda, criterio, resultados);
+            BuscarRecursivo(nodo.derecha, criterio, resultados);
+        }
     }
 }

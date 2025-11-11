@@ -4,11 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{677047B7-155F-4C30-8250-31D8E23317F5}</ProjectGuid>
+    <ProjectGuid>{798EFFA1-448B-4D5D-B055-2D652EB9E1FA}</ProjectGuid>
     <OutputType>Exe</OutputType>
+ HEAD:BibliotecaLibros/BibliotecaLibros.csproj
     <RootNamespace>BibliotecaLibros</RootNamespace>
     <AssemblyName>BibliotecaLibros</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+=======
+    <RootNamespace>BiliotecaLibros_t3</RootNamespace>
+    <AssemblyName>BiliotecaLibros-t3</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+>>>>>>> 9e953730458a6f28b52ab556f9f71f59dd1ec510:BibliotecaLibros/BiliotecaLibros-t3.csproj
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
