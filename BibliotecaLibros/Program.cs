@@ -20,21 +20,45 @@ namespace BiliotecaLibros_t3
             ListaCircular recomendados = new ListaCircular();
 
             //Libros base del catálogo
-            catalogo.Agregar("Cien años de soledad", "García Márquez");
-            catalogo.Agregar("Don Quijote de la Mancha", "Cervantes");
-            catalogo.Agregar("El Principito", "Saint-Exupéry");
-            catalogo.Agregar("1984", "George Orwell");
+            catalogo.Agregar("Los ríos profundos", "José María Arguedas");
+            catalogo.Agregar("El Sexto", "José María Arguedas");
+            catalogo.Agregar("La casa verde", "Mario Vargas Llosa");
+            catalogo.Agregar("Conversación en La Catedral", "Mario Vargas Llosa");
+            catalogo.Agregar("Pantaleón y las visitadoras", "Mario Vargas Llosa");
+            catalogo.Agregar("El pez en el agua", "Mario Vargas Llosa");
+            catalogo.Agregar("Redoble por Rancas", "Manuel Scorza");
+            catalogo.Agregar("Garabombo el invisible", "Manuel Scorza");
+            catalogo.Agregar("Historia de Mayta", "Mario Vargas Llosa");
+            catalogo.Agregar("Yawar Fiesta", "José María Arguedas");
+            catalogo.Agregar("Todas las sangres", "José María Arguedas");
+            catalogo.Agregar("Los perros hambrientos", "Ciro Alegría");
+            catalogo.Agregar("El mundo es ancho y ajeno", "Ciro Alegría");
+            catalogo.Agregar("Duque", "José Diez Canseco");
+            catalogo.Agregar("El Tungsteno", "César Vallejo");
 
             //Insertar en el árbol
-            arbol.Insertar(ref arbol.raiz, "Cien años de soledad", "García Márquez");
-            arbol.Insertar(ref arbol.raiz, "Don Quijote de la Mancha", "Cervantes");
-            arbol.Insertar(ref arbol.raiz, "El Principito", "Saint-Exupéry");
-            arbol.Insertar(ref arbol.raiz, "1984", "George Orwell");
+            arbol.Insertar(ref arbol.raiz, "Los ríos profundos", "José María Arguedas");
+            arbol.Insertar(ref arbol.raiz, "El Sexto", "José María Arguedas");
+            arbol.Insertar(ref arbol.raiz, "La casa verde", "Mario Vargas Llosa");
+            arbol.Insertar(ref arbol.raiz, "Conversación en La Catedral", "Mario Vargas Llosa");
+            arbol.Insertar(ref arbol.raiz, "Pantaleón y las visitadoras", "Mario Vargas Llosa");
+            arbol.Insertar(ref arbol.raiz, "El pez en el agua", "Mario Vargas Llosa");
+            arbol.Insertar(ref arbol.raiz, "Redoble por Rancas", "Manuel Scorza");
+            arbol.Insertar(ref arbol.raiz, "Garabombo el invisible", "Manuel Scorza");
+            arbol.Insertar(ref arbol.raiz, "Historia de Mayta", "Mario Vargas Llosa");
+            arbol.Insertar(ref arbol.raiz, "Yawar Fiesta", "José María Arguedas");
+            arbol.Insertar(ref arbol.raiz, "Todas las sangres", "José María Arguedas");
+            arbol.Insertar(ref arbol.raiz, "Los perros hambrientos", "Ciro Alegría");
+            arbol.Insertar(ref arbol.raiz, "El mundo es ancho y ajeno", "Ciro Alegría");
+            arbol.Insertar(ref arbol.raiz, "Duque", "José Diez Canseco");
+            arbol.Insertar(ref arbol.raiz, "El Tungsteno", "César Vallejo");
 
             // Recomendados del mes (Lista circular)
-            recomendados.Agregar("Harry Potter");
-            recomendados.Agregar("El Hobbit");
-            recomendados.Agregar("Los juegos del hambre");
+            recomendados.Agregar("Los ríos profundos - José María Arguedas");
+            recomendados.Agregar("Rosa Cuchillo - Óscar Colchado Lucio");
+            recomendados.Agregar("La casa verde - Mario Vargas Llosa");
+            recomendados.Agregar("Un mundo para Julius - Alfredo Bryce Echenique");
+            recomendados.Agregar("Abril rojo - Santiago Roncagliolo");
 
             string usuarioActual = "";
             int opcion;
