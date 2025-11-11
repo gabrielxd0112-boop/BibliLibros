@@ -8,31 +8,49 @@ namespace Clases
 {
     public class ListaDoble
     {
-        public NodoDoble inicio, fin;
+        private Nodo cabeza;
+        private Nodo cola;
 
         public void Agregar(string titulo, string autor)
         {
-            NodoDoble nuevo = new NodoDoble();
-            nuevo.titulo = titulo;
-            nuevo.autor = autor;
-
-            if (inicio == null)
-                inicio = fin = nuevo;
+            Nodo nuevo = new Nodo(titulo, autor);
+            if (cabeza == null)
+            {
+                cabeza = cola = nuevo;
+            }
             else
             {
-                fin.siguiente = nuevo;
-                nuevo.anterior = fin;
-                fin = nuevo;
+                cola.sig = nuevo;
+                nuevo.ant = cola;
+                cola = nuevo;
+            }
+        }
+        public void Mostraradelante()
+        {
+            Nodo actual = cabeza;
+            while (actual != null)
+            {
+                Console.WriteLine($"{actual.titulo} - {actual.autor}");
+                actual = actual.sig;
             }
         }
 
-        public void MostrarAdelante()
+        //  Versión para interfaz gráfica
+        public void MostrarAdelante(ListBox lista)
         {
-            NodoDoble temp = inicio;
-            while (temp != null)
+            lista.Items.Clear();
+
+            Nodo actual = cabeza;
+            if (actual == null)
             {
-                Console.WriteLine($"{temp.titulo} - {temp.autor}");
-                temp = temp.siguiente;
+                lista.Items.Add("El catálogo está vacío.");
+                return;
+            }
+
+            while (actual != null)
+            {
+                lista.Items.Add($"{actual.titulo} - {actual.autor}");
+                actual = actual.sig;
             }
         }
     }
