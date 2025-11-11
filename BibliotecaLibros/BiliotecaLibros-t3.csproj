@@ -6,7 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{798EFFA1-448B-4D5D-B055-2D652EB9E1FA}</ProjectGuid>
     <OutputType>Exe</OutputType>
- Temporary merge branch 1:BibliotecaLibros/BiliotecaLibros-t3.csproj
+<<<<<<< HEAD:BibliotecaLibros/BibliotecaLibros.csproj
+    <RootNamespace>BibliotecaLibros</RootNamespace>
+    <AssemblyName>BibliotecaLibros</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+=======
     <RootNamespace>BiliotecaLibros_t3</RootNamespace>
     <AssemblyName>BiliotecaLibros-t3</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
