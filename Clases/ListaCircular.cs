@@ -6,43 +6,49 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    public class ListaCircular
-    {
-        public NodoCircular inicio;
-
-        public void Agregar(string titulo)
+    
+        public class ListaCircular
         {
-            NodoCircular nuevo = new NodoCircular();
-            nuevo.titulo = titulo;
+            public NodoCircular inicio = null;
 
-            if (inicio == null)
+            public void Agregar(string titulo)
             {
-                inicio = nuevo;
-                nuevo.siguiente = inicio;
+                NodoCircular nuevo = new NodoCircular(titulo);
+
+                if (inicio == null)
+                {
+                    inicio = nuevo;
+                    inicio.siguiente = inicio;
+                }
+                else
+                {
+                    NodoCircular actual = inicio;
+                    while (actual.siguiente != inicio)
+                    {
+                        actual = actual.siguiente;
+                    }
+                    actual.siguiente = nuevo;
+                    nuevo.siguiente = inicio;
+                }
             }
-            else
-            {
-                NodoCircular temp = inicio;
-                while (temp.siguiente != inicio)
-                    temp = temp.siguiente;
-                temp.siguiente = nuevo;
-                nuevo.siguiente = inicio;
-            }
-        }
 
-        public void Mostrar(int vueltas)
-        {
-            if (inicio == null) return;
-
-            NodoCircular temp = inicio;
-            for (int i = 0; i < vueltas; i++)
+            public void Mostrar(ListBox lista)
             {
+                lista.Items.Clear();
+
+                if (inicio == null)
+                {
+                    lista.Items.Add("No hay libros recomendados actualmente.");
+                    return;
+                }
+
+                NodoCircular actual = inicio;
                 do
                 {
-                    Console.WriteLine("- " + temp.titulo);
-                    temp = temp.siguiente;
-                } while (temp != inicio);
+                    lista.Items.Add($"- {actual.titulo}");
+                    actual = actual.siguiente;
+                } while (actual != inicio);
             }
         }
-    }
+    
 }

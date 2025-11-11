@@ -36,14 +36,43 @@ namespace Clases
             inicio = inicio.siguiente;
         }
 
-        public void Mostrar()
+        public void Mostrar(ListBox lista)
         {
-            NodoCola temp = inicio;
-            while (temp != null)
             {
-                Console.WriteLine("- " + temp.usuario);
-                temp = temp.siguiente;
+                lista.Items.Clear();
+
+                if (inicio == null)
+                {
+                    lista.Items.Add("No hay solicitudes en espera.");
+                    return;
+                }
+
+                NodoCola actual = inicio;
+                while (actual != null)
+                {
+                    lista.Items.Add($"- {actual.usuario}");
+                    actual = actual.siguiente;
+                }
             }
+        }
+
+        public bool Vacia()
+        {
+            return inicio == null;
+        }
+
+        public string Peek()
+        {
+            if (inicio == null) return null;
+            return inicio.usuario.ToString();
+        }
+
+        public string Desencolar()
+        {
+            if (inicio == null) return null;
+            string valor = inicio.usuario.ToString();
+            inicio = inicio.siguiente;
+            return valor;
         }
     }
 }

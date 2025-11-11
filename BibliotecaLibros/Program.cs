@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Clases;
 
-namespace BibliotecaLibros
+namespace BiliotecaLibros_t3
 {
     public  class Program
     {
@@ -147,6 +147,11 @@ namespace BibliotecaLibros
             } while (opcion != 8);
             Console.ReadKey();
         }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 9e953730458a6f28b52ab556f9f71f59dd1ec510
     }
 }
+

@@ -10,5 +10,11 @@ namespace Clases
     {
         public string titulo;
         public NodoCircular siguiente;
+
+        public NodoCircular(string t)
+        {
+            titulo = t;
+            siguiente = null;
+        }
     }
 }
