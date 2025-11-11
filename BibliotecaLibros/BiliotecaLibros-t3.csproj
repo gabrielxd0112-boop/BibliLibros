@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{798EFFA1-448B-4D5D-B055-2D652EB9E1FA}</ProjectGuid>
     <OutputType>Exe</OutputType>
- HEAD:BibliotecaLibros/BibliotecaLibros.csproj
+<<<<<<< HEAD:BibliotecaLibros/BibliotecaLibros.csproj
     <RootNamespace>BibliotecaLibros</RootNamespace>
     <AssemblyName>BibliotecaLibros</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
